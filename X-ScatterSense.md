@@ -167,5 +167,4 @@ Citations:
 [58] https://arxiv.org/html/2409.10942v1
 [59] https://www.polytechnique-insights.com/en/columns/energy/generative-ai-energy-consumption-soars/
 
----
-Answer from Perplexity: pplx.ai/share
+
