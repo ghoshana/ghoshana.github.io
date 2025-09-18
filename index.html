@@ -9,13 +9,16 @@
     :root {
       --primary-color: #0056b3;
       --accent-color: #00c896;
-      --bg-color: #f8f9fa;
-      --text-color: #333;
+      --bg-color: #f5f7fb;
+      --text-color: #2c2c2c;
       --light-gray: #e0e0e0;
+      --card-bg: #ffffff;
     }
 
     * {
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     body {
@@ -23,48 +26,66 @@
       line-height: 1.6;
       color: var(--text-color);
       background-color: var(--bg-color);
-      margin: 0;
-      padding: 0;
     }
 
     header {
       text-align: center;
-      padding: 2rem 1rem;
-      background-color: white;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      padding: 3rem 1rem 2rem;
+      background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+      color: white;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     }
 
     h1 {
-      margin-bottom: 0.5rem;
+      font-size: 2.5rem;
+      margin-bottom: 0.25rem;
       font-weight: 700;
-      color: var(--primary-color);
+    }
+
+    .tagline {
+      font-size: 1.1rem;
+      font-weight: 300;
+      margin-bottom: 0.5rem;
     }
 
     .contact {
       font-size: 0.95rem;
-      color: #555;
+      margin-top: 0.5rem;
+    }
+
+    .contact a {
+      color: #fff;
+      font-weight: 500;
     }
 
     .container {
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
-      padding: 1rem;
+      padding: 2rem 1rem;
     }
 
     section {
       margin-bottom: 2rem;
-      background-color: white;
-      padding: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      background-color: var(--card-bg);
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    section:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
     }
 
     h2 {
       color: var(--primary-color);
-      margin-top: 0;
-      padding-bottom: 0.5rem;
-      border-bottom: 2px solid var(--accent-color);
-      display: inline-block;
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+      border-left: 5px solid var(--accent-color);
+      padding-left: 0.75rem;
     }
 
     ul, ol {
@@ -72,7 +93,7 @@
     }
 
     li {
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.6rem;
     }
 
     a {
@@ -87,24 +108,25 @@
     .button {
       display: inline-block;
       margin-top: 1rem;
-      padding: 0.75rem 1.5rem;
+      padding: 0.85rem 1.8rem;
       background: var(--primary-color);
       color: #fff;
       text-decoration: none;
-      border-radius: 6px;
-      transition: background 0.3s ease;
+      border-radius: 8px;
+      font-weight: 500;
+      transition: background 0.3s ease, transform 0.2s ease;
     }
 
     .button:hover {
       background: #003d82;
-      text-decoration: none;
+      transform: scale(1.03);
     }
 
     footer {
       text-align: center;
-      font-size: 0.85rem;
-      color: #888;
-      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #777;
+      margin: 3rem 0 1rem;
     }
   </style>
 </head>
@@ -112,8 +134,9 @@
 
   <header>
     <h1>Ghoshana Bista</h1>
+    <p class="tagline">Engineering Researcher | SDN, UAV, Multi-Agent RL | Networks & Cloud</p>
     <div class="contact">
-      📧 ghoshana73@gmail.com   |  📍 Sophia Antipolis, France  <br>
+      📧 ghoshana73@gmail.com | 📍 Sophia Antipolis, France <br>
       <a href="https://www.linkedin.com/in/ghoshana-bista-4128b4117/" target="_blank">LinkedIn Profile</a>
     </div>
   </header>
@@ -128,20 +151,20 @@
     <section>
       <h2>Experience</h2>
       <ul>
-        <li><strong>Research Engineer</strong>, LEAT – Université Côte d’Azur (Feb 2025 – Present) <br>
+        <li><strong>Research Engineer</strong>, LEAT – Université Côte d’Azur (Feb 2025 – Present)<br>
           • SDN-WAN & UAV-assisted MARL for differentiated QoS slicing.<br>
           • Resource allocation optimization & ML-based performance modeling.</li>
-        <li><strong>Researcher (Engineer)</strong>, XLIM, CNRS – Univ. of Poitiers (Sep 2023 – Jan 2025) <br>
-          • 5G network deployment via multi-drone DRL (DDPG) for differentiated QoS. <br>
+        <li><strong>Researcher (Engineer)</strong>, XLIM, CNRS – Univ. of Poitiers (Sep 2023 – Jan 2025)<br>
+          • 5G network deployment via multi-drone DRL (DDPG) for differentiated QoS.<br>
           • Published «Differentiated QoS DDPG-based Slicing and Drone Positioning…» (DCOSS-IoT 2024).</li>
-        <li><strong>PhD Student</strong>, Orange Labs, Bordeaux (Feb 2020 – Feb 2023) <br>
-          • VNF software licensing and resource allocation cost modeling. <br>
+        <li><strong>PhD Student</strong>, Orange Labs, Bordeaux (Feb 2020 – Feb 2023)<br>
+          • VNF software licensing and resource allocation cost modeling.<br>
           • Publications on VNF cost in GIIS 2020, CLOSER 2022, SDS-2022.</li>
-        <li><strong>Intern / Project Officer</strong>, Orange Labs, Chatillon (Mar – Sep 2019) <br>
+        <li><strong>Intern / Project Officer</strong>, Orange Labs, Chatillon (Mar – Sep 2019)<br>
           • 5G NR core & RAN simulation (MATLAB/Java) to analyze QoS metrics.</li>
-        <li><strong>Jr. Engineer</strong>, Kantipur Television, Nepal (Jul 2013 – Nov 2014) <br>
+        <li><strong>Jr. Engineer</strong>, Kantipur Television, Nepal (Jul 2013 – Nov 2014)<br>
           • Broadcast systems supervision, OB van operations, live event support.</li>
-        <li><strong>Intern Engineer</strong>, Nepal Telecom (Jun – Jul 2012) <br>
+        <li><strong>Intern Engineer</strong>, Nepal Telecom (Jun – Jul 2012)<br>
           • GSM/3G/4G architecture, base station planning, QoS analysis.</li>
       </ul>
     </section>
@@ -188,13 +211,13 @@
       <h2>Skills</h2>
       <ul>
         <li>MATLAB, Python, Java, C/C++, ns2/ns3</li>
-        <li>Machine Learning: k‑means, Random Forest, ARIMA, DBSCAN</li>
+        <li>Machine Learning: k-means, Random Forest, ARIMA, DBSCAN</li>
         <li>UAV DRL: DDPG, PPO, DQN; SDN-WAN; Network slicing</li>
       </ul>
     </section>
 
     <section style="text-align:center;">
-      <a class="button" href="Resume_2025.pdf" target="_blank">Download Full CV (PDF)</a>
+      <a class="button" href="Resume_2025.pdf" target="_blank">⬇ Download Full CV (PDF)</a>
     </section>
 
   </div>
