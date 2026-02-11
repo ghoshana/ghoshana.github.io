@@ -1,246 +1,1050 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Ghoshana Bista — CV & Publications</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ghoshana Bista - Research Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary-color: #0056b3;
-      --accent-color: #00c896;
-      --bg-color: #f5f7fb;
-      --text-color: #2c2c2c;
-      --light-gray: #e0e0e0;
-      --card-bg: #ffffff;
+      --primary: #1a365d;
+      --secondary: #2563eb;
+      --accent: #0ea5e9;
+      --bg-primary: #f8fafc;
+      --bg-secondary: #ffffff;
+      --text-primary: #1e293b;
+      --text-secondary: #475569;
+      --border: #e2e8f0;
+      --shadow: rgba(15, 23, 42, 0.08);
     }
 
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     body {
-      font-family: 'Roboto', sans-serif;
-      line-height: 1.6;
-      color: var(--text-color);
-      background-color: var(--bg-color);
+      font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.7;
+      color: var(--text-primary);
+      background: var(--bg-primary);
+      overflow-x: hidden;
     }
 
-    header {
-      text-align: center;
-      padding: 3rem 1rem 2rem;
-      background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-      color: white;
-      border-bottom-left-radius: 30px;
-      border-bottom-right-radius: 30px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(248, 250, 252, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      z-index: 1000;
+      animation: slideDown 0.5s ease-out;
     }
 
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.25rem;
-      font-weight: 700;
+    @keyframes slideDown {
+      from {
+        transform: translateY(-100%);
+      }
+      to {
+        transform: translateY(0);
+      }
     }
 
-    .tagline {
-      font-size: 1.1rem;
-      font-weight: 300;
+    nav .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    nav ul {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text-secondary);
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--secondary);
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--secondary);
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .theme-toggle {
+      background: none;
+      border: none;
+      font-size: 1.3rem;
+      cursor: pointer;
+      padding: 0.5rem;
+      border-radius: 50%;
+      transition: background 0.3s ease;
+    }
+
+    .theme-toggle:hover {
+      background: var(--border);
+    }
+
+    /* Hero Section */
+    .hero {
+      margin-top: 80px;
+      padding: 6rem 2rem 4rem;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 4rem;
+      align-items: start;
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .profile-sidebar {
+      position: sticky;
+      top: 120px;
+      animation: slideInLeft 0.8s ease-out;
+    }
+
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .profile-image {
+      width: 100%;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid var(--bg-secondary);
+      box-shadow: 0 20px 40px var(--shadow), 0 0 0 1px var(--border);
+      margin-bottom: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .profile-image:hover {
+      transform: scale(1.02);
+      box-shadow: 0 25px 50px rgba(15, 23, 42, 0.12), 0 0 0 1px var(--border);
+    }
+
+    .profile-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--primary);
       margin-bottom: 0.5rem;
     }
 
-    .contact {
-      font-size: 0.95rem;
-      margin-top: 0.5rem;
+    .profile-title {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+      font-weight: 400;
     }
 
-    .contact a {
-      color: #fff;
+    .profile-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .profile-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+
+    .profile-meta-item svg {
+      width: 18px;
+      height: 18px;
+      color: var(--secondary);
+      flex-shrink: 0;
+    }
+
+    .social-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.5rem 0.75rem;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      text-decoration: none;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+    }
+
+    .social-link:hover {
+      background: var(--secondary);
+      color: white;
+      border-color: var(--secondary);
+      transform: translateX(5px);
+    }
+
+    .social-link svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    /* Main Content */
+    .main-content {
+      animation: slideInRight 0.8s ease-out;
+    }
+
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .intro {
+      margin-bottom: 3rem;
+    }
+
+    .intro h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.75rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .intro .highlight {
+      color: var(--secondary);
+    }
+
+    .visit-counter {
+      display: inline-block;
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      color: white;
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
       font-weight: 500;
+      margin-left: 1rem;
+      animation: pulse 2s ease-in-out infinite;
     }
 
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 2rem 1rem;
+    @keyframes pulse {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.8;
+      }
     }
 
-    section {
+    .intro-badges {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 0.9rem;
+      color: var(--text-primary);
+    }
+
+    .badge svg {
+      width: 20px;
+      height: 20px;
+      color: var(--secondary);
+    }
+
+    .intro-text {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+
+    .research-highlight {
+      display: flex;
+      align-items: start;
+      gap: 1rem;
+      padding: 1.5rem;
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(14, 165, 233, 0.05));
+      border-left: 4px solid var(--secondary);
+      border-radius: 8px;
       margin-bottom: 2rem;
-      background-color: var(--card-bg);
+    }
+
+    .research-highlight svg {
+      width: 24px;
+      height: 24px;
+      color: var(--secondary);
+      flex-shrink: 0;
+      margin-top: 0.25rem;
+    }
+
+    .research-highlight p {
+      color: var(--text-primary);
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    /* Section */
+    .section {
+      margin-bottom: 4rem;
+      animation: fadeInUp 0.6s ease-out;
+      animation-fill-mode: both;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .section:nth-child(1) { animation-delay: 0.1s; }
+    .section:nth-child(2) { animation-delay: 0.2s; }
+    .section:nth-child(3) { animation-delay: 0.3s; }
+    .section:nth-child(4) { animation-delay: 0.4s; }
+    .section:nth-child(5) { animation-delay: 0.5s; }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 2rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid var(--border);
+    }
+
+    .section-title svg {
+      width: 32px;
+      height: 32px;
+      color: var(--secondary);
+    }
+
+    /* About Section */
+    .about-content {
+      display: grid;
+      gap: 2rem;
+    }
+
+    .about-card {
+      background: var(--bg-secondary);
       padding: 2rem;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 4px 20px var(--shadow);
+      border: 1px solid var(--border);
+      transition: all 0.3s ease;
     }
 
-    section:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    .about-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 30px rgba(15, 23, 42, 0.12);
     }
 
-    h2 {
-      color: var(--primary-color);
+    .about-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      color: var(--primary);
       margin-bottom: 1rem;
-      font-size: 1.4rem;
-      border-left: 5px solid var(--accent-color);
-      padding-left: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
     }
 
-    ul, ol {
-      margin-left: 1.5rem;
+    .about-card h3 svg {
+      width: 24px;
+      height: 24px;
+      color: var(--secondary);
     }
 
-    li {
-      margin-bottom: 0.6rem;
+    .timeline-item {
+      margin-bottom: 2rem;
+      padding-left: 2rem;
+      position: relative;
     }
 
-    a {
-      color: var(--primary-color);
-      text-decoration: none;
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: -2rem;
+      width: 2px;
+      background: var(--border);
     }
 
-    a:hover {
-      text-decoration: underline;
+    .timeline-item:last-child::before {
+      display: none;
     }
 
-    .button {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.85rem 1.8rem;
-      background: var(--primary-color);
-      color: #fff;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: 500;
-      transition: background 0.3s ease, transform 0.2s ease;
+    .timeline-item::after {
+      content: '';
+      position: absolute;
+      left: -4px;
+      top: 6px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--secondary);
+      border: 2px solid var(--bg-secondary);
     }
 
-    .button:hover {
-      background: #003d82;
-      transform: scale(1.03);
+    .timeline-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      margin-bottom: 0.5rem;
+      gap: 1rem;
     }
 
-    footer {
-      text-align: center;
+    .timeline-title {
+      font-weight: 600;
+      color: var(--primary);
+      font-size: 1.05rem;
+    }
+
+    .timeline-date {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      white-space: nowrap;
+    }
+
+    .timeline-org {
+      color: var(--secondary);
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .timeline-desc {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .timeline-desc ul {
+      margin-top: 0.5rem;
+      margin-left: 1.25rem;
+    }
+
+    .timeline-desc li {
+      margin-bottom: 0.25rem;
+    }
+
+    /* Publications */
+    .publication-item {
+      background: var(--bg-secondary);
+      padding: 1.5rem;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      margin-bottom: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .publication-item:hover {
+      border-color: var(--secondary);
+      box-shadow: 0 4px 20px var(--shadow);
+      transform: translateX(5px);
+    }
+
+    .pub-title {
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+      font-size: 1.05rem;
+    }
+
+    .pub-authors {
+      color: var(--text-secondary);
       font-size: 0.9rem;
-      color: #777;
-      margin: 3rem 0 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .pub-venue {
+      color: var(--secondary);
+      font-size: 0.9rem;
+      font-style: italic;
+    }
+
+    .pub-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 0.75rem;
+      padding: 0.5rem 1rem;
+      background: var(--secondary);
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      transition: all 0.3s ease;
+    }
+
+    .pub-link:hover {
+      background: var(--primary);
+      transform: translateY(-2px);
+    }
+
+    /* Skills */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .skill-category {
+      background: var(--bg-secondary);
+      padding: 1.5rem;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      transition: all 0.3s ease;
+    }
+
+    .skill-category:hover {
+      border-color: var(--secondary);
+      box-shadow: 0 4px 20px var(--shadow);
+    }
+
+    .skill-category h3 {
+      font-size: 1.1rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .skill-category h3 svg {
+      width: 20px;
+      height: 20px;
+      color: var(--secondary);
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .skill-tag {
+      padding: 0.4rem 0.8rem;
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(14, 165, 233, 0.1));
+      color: var(--secondary);
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border);
+      padding: 2rem;
+      text-align: center;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      margin-top: 4rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 968px) {
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .profile-sidebar {
+        position: static;
+        max-width: 300px;
+        margin: 0 auto;
+      }
+
+      nav ul {
+        gap: 1rem;
+      }
+
+      .intro h1 {
+        font-size: 2rem;
+      }
+
+      .section-title {
+        font-size: 1.5rem;
+      }
+    }
+
+    @media (max-width: 640px) {
+      nav .container {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .timeline-header {
+        flex-direction: column;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Ghoshana Bista</h1>
-    <p class="tagline">Researcher, Engineer | SDN, UAV, Multi-Agent RL | Networks & Cloud</p>
-    <div class="contact">
-      📧 ghoshana73@gmail.com | 📍 Sophia Antipolis, France <br>
-      <a href="https://www.linkedin.com/in/ghoshana-bista-4128b4117/" target="_blank">LinkedIn Profile</a>
-    </div>
-  </header>
-
-  <div class="container">
-
-    <section>
-      <h2>Professional Profile</h2>
-      <p>Initiative-taking engineering researcher with industrial experience in system design, integration and implementation. PhD in Software Asset Management and NFV from ENS de Lyon / Inria (Feb 2023). Current research: SDN-WAN + UAV + Multi-Agent RL for tiered-QoS 5G slicing.</p>
-    </section>
-
-    <section>
-      <h2>Experience</h2>
+  <!-- Navigation -->
+  <nav>
+    <div class="container">
+      <div class="logo">Ghoshana Bista</div>
       <ul>
-        <li><strong>Research Engineer</strong>, LEAT – Université Côte d’Azur (Feb 2025 – Present)<br>
-          • SDN-WAN & UAV-assisted MARL for differentiated QoS slicing.<br>
-          • Resource allocation optimization & ML-based performance modeling.</li>
-        <li><strong>Researcher (Engineer)</strong>, XLIM, CNRS – Univ. of Poitiers (Sep 2023 – Jan 2025)<br>
-          • 5G network deployment via multi-drone DRL (DDPG) for differentiated QoS.<br>
-          • Published «Differentiated QoS DDPG-based Slicing and Drone Positioning…» (DCOSS-IoT 2024).</li>
-        <li><strong>PhD Student</strong>, Orange Labs, Bordeaux (Feb 2020 – Feb 2023)<br>
-          • VNF software licensing and resource allocation cost modeling.<br>
-          • Publications on VNF cost in GIIS 2020, CLOSER 2022, SDS-2022.</li>
-        <li><strong>Intern / Project Officer</strong>, Orange Labs, Chatillon (Mar – Sep 2019)<br>
-          • 5G NR core & RAN simulation (MATLAB/Java) to analyze QoS metrics.</li>
-        <li><strong>Jr. Engineer</strong>, Kantipur Television, Nepal (Jul 2013 – Nov 2014)<br>
-          • Broadcast systems supervision, OB van operations, live event support.</li>
-        <li><strong>Intern Engineer</strong>, Nepal Telecom (Jun – Jul 2012)<br>
-          • GSM/3G/4G architecture, base station planning, QoS analysis.</li>
+        <li><a href="#home">Homepage</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
-    </section>
+      <button class="theme-toggle" aria-label="Toggle theme">⚙️</button>
+    </div>
+  </nav>
 
-     <section>
-    <h2>Education</h2>
-    <ul>
-      <li>PhD in Info. & Mathematics, ENS de Lyon & Inria (Feb 2023)</li>
-  
-      <li>MSc Data Science & Network Intelligence, Télécom SudParis (2018–2019)</li>
-  
-      <li>Master in Telecommunication Engineering, AIT Thailand (2017–2019)
-        <ul style="margin-top:0.3rem;">
-          <li>
-            <a href="Research_report_final.pdf" target="_blank" rel="noopener">
-              📘 Master’s Thesis: Research Report (PDF)
-            </a>
-          </li> 
-          <li>
-            <a href="special%20study%202%20(1).pdf" target="_blank" rel="noopener">
-              📄 Special Study (PDF)
-            </a>
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <aside class="profile-sidebar">
+      <img src="https://via.placeholder.com/300" alt="Ghoshana Bista" class="profile-image">
+      <h2 class="profile-name">Ghoshana Bista</h2>
+      <p class="profile-title">Researcher</p>
+      
+      <div class="profile-meta">
+        <div class="profile-meta-item">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+          </svg>
+          <span>Sophia Antipolis, France</span>
+        </div>
+        <div class="profile-meta-item">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+          </svg>
+          <span>Université Côte d'Azur</span>
+        </div>
+      </div>
 
-          </li>
-        </ul>
-      </li>
-  
-      <li>Grad. Diploma Computing (DCN), Unitec Auckland (2011–2012)</li>
-      <li>Bachelor in ECE, Kathmandu Engineering College (2008–2012)</li>
-    </ul>
+      <div class="social-links">
+        <a href="mailto:ghoshana73@gmail.com" class="social-link">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+          </svg>
+          Email
+        </a>
+        <a href="https://www.linkedin.com/in/ghoshana-bista-4128b4117/" target="_blank" class="social-link">
+          <svg fill="currentColor" viewBox="0 0 24 24">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+          </svg>
+          LinkedIn
+        </a>
+        <a href="#" class="social-link">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+          </svg>
+          Google Scholar
+        </a>
+        <a href="#" class="social-link">
+          <svg fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+          </svg>
+          GitHub
+        </a>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="intro">
+        <h1>
+          Hello, I'm <span class="highlight">Ghoshana</span> — welcome to my page.
+          <span class="visit-counter">visits 828</span>
+        </h1>
+        
+        <div class="intro-badges">
+          <div class="badge">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+            </svg>
+            <span>Research Engineer</span>
+          </div>
+          <div class="badge">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+            </svg>
+            <span>Academy Research Fellow</span>
+          </div>
+        </div>
+
+        <p class="intro-text">
+          I'm a <strong>Research Engineer</strong> at <strong>LEAT – Université Côte d'Azur</strong>, France, specializing in wireless communications and network optimization.
+        </p>
+
+        <div class="research-highlight">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+          </svg>
+          <p>
+            My research combines rigorous <strong>signal processing, machine learning, and multi-agent reinforcement learning</strong> to solve core problems in <strong>SDN-WAN, UAV networks, 5G slicing, and differentiated QoS provisioning</strong>.
+          </p>
+        </div>
+      </div>
+
+      <!-- About Section -->
+      <section class="section" id="about">
+        <h2 class="section-title">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          About
+        </h2>
+        
+        <div class="about-content">
+          <div class="about-card">
+            <h3>
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+              </svg>
+              Education
+            </h3>
+            <p style="color: var(--text-secondary); line-height: 1.7;">
+              I received my <strong>B.S. in Electronics & Communications Engineering</strong> from Kathmandu Engineering College, Nepal (2012), 
+              and my <strong>M.S./Ph.D.</strong> from ENS de Lyon & Inria, France (2023), specializing in Software Asset Management and Network Function Virtualization.
+            </p>
+          </div>
+
+          <div class="about-card">
+            <h3>
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+              Career Path
+            </h3>
+            <p style="color: var(--text-secondary); line-height: 1.7;">
+              I started as a <strong>Junior Engineer at Kantipur Television</strong> in Nepal, then moved to research roles at <strong>Orange Labs (France)</strong>, 
+              <strong>XLIM/CNRS (University of Poitiers)</strong>, and currently at <strong>LEAT (Université Côte d'Azur)</strong>, focusing on next-generation wireless networks.
+            </p>
+          </div>
+
+          <div class="about-card">
+            <h3>
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+              </svg>
+              Research Interests
+            </h3>
+            <p style="color: var(--text-secondary); line-height: 1.7;">
+              <strong>Signal processing and optimization</strong>; <strong>deep unfolding / machine learning for wireless</strong>; 
+              <strong>SDN-WAN architecture</strong>; <strong>UAV-assisted networks</strong>; <strong>multi-agent reinforcement learning</strong>; 
+              <strong>5G network slicing</strong>; <strong>differentiated QoS provisioning</strong>; and <strong>resource allocation in virtualized environments</strong>.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience Section -->
+      <section class="section" id="experience">
+        <h2 class="section-title">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+          </svg>
+          Experience
+        </h2>
+
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <div>
+              <div class="timeline-title">Research Engineer</div>
+              <div class="timeline-org">LEAT – Université Côte d'Azur</div>
+            </div>
+            <div class="timeline-date">Feb 2025 – Present</div>
+          </div>
+          <div class="timeline-desc">
+            <ul>
+              <li>SDN-WAN & UAV-assisted MARL for differentiated QoS slicing</li>
+              <li>Resource allocation optimization & ML-based performance modeling</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <div>
+              <div class="timeline-title">Researcher (Engineer)</div>
+              <div class="timeline-org">XLIM, CNRS – University of Poitiers</div>
+            </div>
+            <div class="timeline-date">Sep 2023 – Jan 2025</div>
+          </div>
+          <div class="timeline-desc">
+            <ul>
+              <li>5G network deployment via multi-drone DRL (DDPG) for differentiated QoS</li>
+              <li>Published research on DDPG-based slicing and drone positioning at DCOSS-IoT 2024</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <div>
+              <div class="timeline-title">PhD Student</div>
+              <div class="timeline-org">Orange Labs, Bordeaux</div>
+            </div>
+            <div class="timeline-date">Feb 2020 – Feb 2023</div>
+          </div>
+          <div class="timeline-desc">
+            <ul>
+              <li>VNF software licensing and resource allocation cost modeling</li>
+              <li>Publications on VNF cost in GIIS 2020, CLOSER 2022, SDS-2022</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <div>
+              <div class="timeline-title">Intern / Project Officer</div>
+              <div class="timeline-org">Orange Labs, Chatillon</div>
+            </div>
+            <div class="timeline-date">Mar – Sep 2019</div>
+          </div>
+          <div class="timeline-desc">
+            5G NR core & RAN simulation (MATLAB/Java) to analyze QoS metrics
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <div>
+              <div class="timeline-title">Junior Engineer</div>
+              <div class="timeline-org">Kantipur Television, Nepal</div>
+            </div>
+            <div class="timeline-date">Jul 2013 – Nov 2014</div>
+          </div>
+          <div class="timeline-desc">
+            Broadcast systems supervision, OB van operations, live event support
+          </div>
+        </div>
+      </section>
+
+      <!-- Publications Section -->
+      <section class="section" id="publications">
+        <h2 class="section-title">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+          </svg>
+          Publications
+        </h2>
+
+        <div class="publication-item">
+          <div class="pub-title">Differentiated QoS DDPG-based Slicing and Drone Positioning for Aerial RAN</div>
+          <div class="pub-authors">G. Bista, A. Bradai, E. Moulay</div>
+          <div class="pub-venue">DCOSS-IoT 2024</div>
+          <a href="https://doi.org/10.1109/DCOSS-IoT61029.2024.00055" class="pub-link" target="_blank">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 16px; height: 16px;">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+            </svg>
+            DOI
+          </a>
+        </div>
+
+        <div class="publication-item">
+          <div class="pub-title">Total Cost Modeling Of Software Ownership in VNFs</div>
+          <div class="pub-authors">G. Bista, E. Caron, A.-L. Vion</div>
+          <div class="pub-venue">DPCC, ENS Lyon, 2023</div>
+        </div>
+
+        <div class="publication-item">
+          <div class="pub-title">VNF Software Cost Modeling Based on Telecom Network</div>
+          <div class="pub-authors">G. Bista, E. Caron, A.-L. Vion</div>
+          <div class="pub-venue">SDS-2022</div>
+        </div>
+
+        <div class="publication-item">
+          <div class="pub-title">Total cost modeling for VNF based on licenses and resources</div>
+          <div class="pub-authors">G. Bista, E. Caron, A.-L. Vion</div>
+          <div class="pub-venue">CLOSER 2022</div>
+          <a href="https://doi.org/10.5220/0011079600003200" class="pub-link" target="_blank">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 16px; height: 16px;">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+            </svg>
+            DOI
+          </a>
+        </div>
+
+        <div class="publication-item">
+          <div class="pub-title">A study on optimizing VNF software cost</div>
+          <div class="pub-authors">G. Bista, E. Caron, A.-L. Vion</div>
+          <div class="pub-venue">GIIS 2020</div>
+          <a href="https://doi.org/10.1109/GIIS50753.2020.9248486" class="pub-link" target="_blank">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 16px; height: 16px;">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+            </svg>
+            DOI
+          </a>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section class="section" id="skills">
+        <h2 class="section-title">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+          </svg>
+          Skills
+        </h2>
+
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+              </svg>
+              Programming
+            </h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">MATLAB</span>
+              <span class="skill-tag">Java</span>
+              <span class="skill-tag">C/C++</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3>
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>
+              </svg>
+              Machine Learning
+            </h3>
+            <div class="skill-tags">
+              <span class="skill-tag">k-means</span>
+              <span class="skill-tag">Random Forest</span>
+              <span class="skill-tag">ARIMA</span>
+              <span class="skill-tag">DBSCAN</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3>
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              </svg>
+              Deep RL & Networks
+            </h3>
+            <div class="skill-tags">
+              <span class="skill-tag">DDPG</span>
+              <span class="skill-tag">PPO</span>
+              <span class="skill-tag">DQN</span>
+              <span class="skill-tag">SDN-WAN</span>
+              <span class="skill-tag">Network Slicing</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3>
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+              </svg>
+              Simulation
+            </h3>
+            <div class="skill-tags">
+              <span class="skill-tag">ns2/ns3</span>
+              <span class="skill-tag">Network Simulation</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   </section>
 
-
-    <section>
-      <h2>Publications</h2>
-      <ol>
-        <li>G. Bista, E. Caron, A.-L. Vion. "A study on optimizing VNF software cost." GIIS 2020. DOI: 10.1109/GIIS50753.2020.9248486</li>
-        <li>G. Bista, E. Caron, A.-L. Vion. "Total cost modeling for VNF based on licenses and resources." CLOSER 2022. DOI: 10.5220/0011079600003200</li>
-        <li>G. Bista, E. Caron, A.-L. Vion. "VNF Software Cost Modeling Based on Telecom Network." SDS-2022.</li>
-        <li>G. Bista, E. Caron, A.-L. Vion. "Total Cost Modeling Of Software Ownership in VNFs." DPCC, ENS Lyon, 2023.</li>
-        <li>G. Bista, A. Bradai, E. Moulay. "Differentiated QoS DDPG-based Slicing and Drone Positioning…" DCOSS-IoT 2024. DOI:10.1109/DCOSS-IoT61029.2024.00055</li>
-      </ol>
-    </section>
-
-    <section>
-      <h2>Writings & Essays</h2>
-      <p>Click to view article in LaTeX-like formatting (math rendering via MathJax):</p>
-      <ul>
-        <li><a href="X-ScatterSense.md" target="_blank">X-ScatterSense: Cross-Layer Optimization for Intelligent Sensing via Energy-Harvesting Backscatter Networks</a></li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Peer Reviewing</h2>
-      <ul>
-        <li>Concurrency and Computation: Practice and Experience (Wiley)</li>
-        <li>Journal of Network and Systems Management</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Skills</h2>
-      <ul>
-        <li>MATLAB, Python, Java, C/C++, ns2/ns3</li>
-        <li>Machine Learning: k-means, Random Forest, ARIMA, DBSCAN</li>
-        <li>UAV DRL: DDPG, PPO, DQN; SDN-WAN; Network slicing</li>
-      </ul>
-    </section>
-
-  
-
-
-  </div>
-
-  <footer>
-    <p>© 2025 Ghoshana Bista</p>
+  <footer id="contact">
+    <p>© 2025 Ghoshana Bista • Built with passion for research and innovation</p>
   </footer>
 
 </body>
