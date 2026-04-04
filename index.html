@@ -3,55 +3,135 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ghoshana Bista — Research Engineer</title>
-
-  <!-- Fonts -->
+  <title>Ghoshana Bista — Research Engineer | SDN • UAV • Multi-Agent RL</title>
+  
+  <!-- SEO & Social Meta Tags -->
+  <meta name="description" content="Research Engineer specializing in SDN-WAN, UAV-assisted networks, and Multi-Agent Reinforcement Learning for differentiated QoS and 5G/6G network slicing. Publications, experience, and contact." />
+  <meta name="keywords" content="Ghoshana Bista, Research Engineer, SDN, UAV, Multi-Agent RL, QoS, 5G slicing, network optimization, DDPG, PPO, DQN" />
+  <meta name="author" content="Ghoshana Bista" />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="Ghoshana Bista — Research Engineer" />
+  <meta property="og:description" content="SDN-WAN • UAV-assisted networks • Multi-Agent RL for tiered QoS & 5G slicing" />
+  <meta property="og:url" content="https://ghoshana-bista.com" />
+  <meta property="og:image" content="https://ghoshana-bista.com/og-image.png" />
+  <meta property="profile:first_name" content="Ghoshana" />
+  <meta property="profile:last_name" content="Bista" />
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ghoshana Bista — Research Engineer" />
+  <meta name="twitter:description" content="Building AI-driven network systems: SDN, UAVs, and Multi-Agent RL for 5G/6G QoS slicing." />
+  <meta name="twitter:image" content="https://ghoshana-bista.com/og-image.png" />
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://ghoshana-bista.com" />
+  
+  <!-- Preconnect for Performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+  <!-- Fonts with font-display: swap for performance -->
   <link
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap"
     rel="stylesheet"
   />
 
+  <!-- JSON-LD Structured Data for Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ghoshana Bista",
+    "givenName": "Ghoshana",
+    "familyName": "Bista",
+    "jobTitle": "Research Engineer",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "LEAT — Université Côte d'Azur"
+    },
+    "email": "mailto:ghoshana73@gmail.com",
+    "url": "https://ghoshana-bista.com",
+    "sameAs": [
+      "https://www.linkedin.com/in/ghoshana-bista-4128b4117/",
+      "https://scholar.google.com/citations?hl=fr&user=X3rJrjUAAAAJ",
+      "https://github.com/ghoshana",
+      "https://orcid.org/0000-0000-0000-0000"
+    ],
+    "alumniOf": [
+      {
+        "@type": "EducationalOrganization",
+        "name": "ENS de Lyon & Inria"
+      },
+      {
+        "@type": "EducationalOrganization",
+        "name": "Télécom SudParis"
+      },
+      {
+        "@type": "EducationalOrganization",
+        "name": "Asian Institute of Technology"
+      }
+    ],
+    "knowsAbout": [
+      "Software-Defined Networking",
+      "UAV Communications",
+      "Multi-Agent Reinforcement Learning",
+      "5G Network Slicing",
+      "QoS Optimization",
+      "Network Function Virtualization",
+      "DDPG",
+      "PPO",
+      "DQN"
+    ]
+  }
+  </script>
+
   <style>
     :root {
-      /* Bluish + greenish premium palette */
+      /* Bluish + greenish premium palette - WCAG AA compliant */
       --bg: #f6fbff;
       --bg2: #ffffff;
-      --card: rgba(255, 255, 255, 0.82);
+      --card: rgba(255, 255, 255, 0.88);
       --text: #0b172a;
+      --text-on-gradient: #0a1929;
       --muted: #47607a;
-      --border: rgba(15, 23, 42, 0.10);
-      --shadow: rgba(2, 6, 23, 0.10);
+      --border: rgba(15, 23, 42, 0.12);
+      --shadow: rgba(2, 6, 23, 0.12);
 
-      --primary: #0b3a5c;         /* deep blue */
-      --brandA: #1f6feb;          /* blue */
-      --brandB: #18b6a4;          /* teal/green */
-      --brandC: #0ea5e9;          /* sky */
-      --ring: rgba(31, 111, 235, 0.25);
+      --primary: #0b3a5c;
+      --brandA: #1f6feb;
+      --brandB: #18b6a4;
+      --brandC: #0ea5e9;
+      --ring: rgba(31, 111, 235, 0.35);
 
       --radius: 16px;
       --radius2: 22px;
-
       --navH: 72px;
       --maxW: 1180px;
+      
+      /* Colorblind-safe accent for critical info */
+      --accent-safe: #d97706;
     }
 
-    /* Dark theme */
+    /* Dark theme - enhanced contrast */
     [data-theme="dark"] {
       --bg: #06111d;
       --bg2: #071827;
-      --card: rgba(7, 24, 39, 0.72);
+      --card: rgba(7, 24, 39, 0.78);
       --text: #e7f1ff;
-      --muted: #9ab2c9;
-      --border: rgba(231, 241, 255, 0.12);
-      --shadow: rgba(0, 0, 0, 0.45);
+      --text-on-gradient: #f0f7ff;
+      --muted: #a8c0d9;
+      --border: rgba(231, 241, 255, 0.15);
+      --shadow: rgba(0, 0, 0, 0.50);
 
-      --primary: #bfe3ff;
-      --brandA: #4aa3ff;
-      --brandB: #2ad6b7;
-      --brandC: #2dd4ff;
-      --ring: rgba(74, 163, 255, 0.22);
+      --primary: #cfe8ff;
+      --brandA: #5ab0ff;
+      --brandB: #3adcc0;
+      --brandC: #3ddcff;
+      --ring: rgba(90, 176, 255, 0.30);
+      --accent-safe: #fbbf24;
     }
 
     * { box-sizing: border-box; }
@@ -60,18 +140,39 @@
       margin: 0;
       font-family: "IBM Plex Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       color: var(--text);
-      background: radial-gradient(1200px 700px at 15% 10%, rgba(31,111,235,0.12), transparent 60%),
-                  radial-gradient(900px 600px at 85% 5%, rgba(24,182,164,0.12), transparent 60%),
-                  linear-gradient(180deg, var(--bg), var(--bg2));
+      background: 
+        radial-gradient(1200px 700px at 15% 10%, rgba(31,111,235,0.10), transparent 60%),
+        radial-gradient(900px 600px at 85% 5%, rgba(24,182,164,0.10), transparent 60%),
+        linear-gradient(180deg, var(--bg), var(--bg2));
       line-height: 1.7;
       overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
-    /* Focus ring */
+    /* Focus ring - enhanced visibility */
     :focus-visible {
       outline: 3px solid var(--ring);
       outline-offset: 3px;
       border-radius: 10px;
+      box-shadow: 0 0 0 6px color-mix(in oklab, var(--ring) 30%, transparent);
+    }
+
+    /* Skip link for accessibility */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--brandA);
+      color: white;
+      padding: 8px 16px;
+      z-index: 2000;
+      border-radius: 0 0 8px 0;
+      font-weight: 700;
+      transition: top 0.2s;
+    }
+    .skip-link:focus {
+      top: 0;
     }
 
     /* Helpers */
@@ -95,8 +196,9 @@
       z-index: 1000;
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
-      background: color-mix(in oklab, var(--bg2) 65%, transparent);
+      background: color-mix(in oklab, var(--bg2) 70%, transparent);
       border-bottom: 1px solid var(--border);
+      transition: background 0.3s ease, border-color 0.3s ease;
     }
     .nav-inner {
       height: 100%;
@@ -113,15 +215,18 @@
       text-decoration: none;
       color: var(--text);
       min-width: 220px;
+      transition: opacity 0.2s ease;
     }
+    .logo:hover { opacity: 0.9; }
     .logo-mark {
       width: 40px; height: 40px;
       border-radius: 14px;
       background:
-        radial-gradient(12px 12px at 30% 35%, rgba(255,255,255,0.9), transparent 60%),
+        radial-gradient(12px 12px at 30% 35%, rgba(255,255,255,0.95), transparent 60%),
         linear-gradient(135deg, var(--brandA), var(--brandB));
       box-shadow: 0 10px 30px var(--shadow);
       border: 1px solid color-mix(in oklab, var(--border) 60%, transparent);
+      flex-shrink: 0;
     }
     .logo-text {
       display: flex;
@@ -143,7 +248,7 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 18px;
+      gap: 8px;
       list-style: none;
       margin: 0;
       padding: 0;
@@ -153,14 +258,27 @@
       color: var(--muted);
       font-weight: 600;
       font-size: 0.92rem;
-      padding: 10px 10px;
+      padding: 10px 12px;
       border-radius: 12px;
-      transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
+      transition: all 0.25s ease;
+      position: relative;
     }
-    .nav-links a:hover {
+    .nav-links a:hover,
+    .nav-links a.active {
       color: var(--text);
-      background: color-mix(in oklab, var(--brandA) 12%, transparent);
+      background: color-mix(in oklab, var(--brandA) 15%, transparent);
       transform: translateY(-1px);
+    }
+    .nav-links a.active::after {
+      content: "";
+      position: absolute;
+      bottom: 4px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--brandB);
     }
 
     .nav-actions {
@@ -171,24 +289,34 @@
 
     .btn {
       border: 1px solid var(--border);
-      background: color-mix(in oklab, var(--bg2) 75%, transparent);
+      background: color-mix(in oklab, var(--bg2) 80%, transparent);
       color: var(--text);
-      padding: 10px 12px;
+      padding: 10px 14px;
       border-radius: 14px;
       cursor: pointer;
       font-weight: 700;
       font-size: 0.92rem;
-      transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
-      box-shadow: 0 10px 30px var(--shadow);
+      transition: all 0.25s ease;
+      box-shadow: 0 8px 24px var(--shadow);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
     }
-    .btn:hover { transform: translateY(-1px); }
-    .btn:active { transform: translateY(0px); }
+    .btn:hover { 
+      transform: translateY(-2px); 
+      box-shadow: 0 12px 32px var(--shadow);
+    }
+    .btn:active { transform: translateY(0); }
 
     .btn-primary {
       border: none;
       background: linear-gradient(135deg, var(--brandA), var(--brandB));
       color: white;
-      box-shadow: 0 14px 36px color-mix(in oklab, var(--brandA) 20%, var(--shadow));
+      box-shadow: 0 12px 32px color-mix(in oklab, var(--brandA) 25%, var(--shadow));
+    }
+    .btn-primary:hover {
+      box-shadow: 0 16px 40px color-mix(in oklab, var(--brandA) 35%, var(--shadow));
     }
 
     .icon-btn {
@@ -198,22 +326,28 @@
       place-items: center;
       border-radius: 14px;
       border: 1px solid var(--border);
-      background: color-mix(in oklab, var(--bg2) 75%, transparent);
+      background: color-mix(in oklab, var(--bg2) 80%, transparent);
       cursor: pointer;
-      box-shadow: 0 10px 30px var(--shadow);
-      transition: transform 0.25s ease, background 0.25s ease;
+      box-shadow: 0 8px 24px var(--shadow);
+      transition: all 0.25s ease;
+      color: var(--text);
+      font-size: 1.1rem;
     }
-    .icon-btn:hover { transform: translateY(-1px); }
+    .icon-btn:hover { 
+      transform: translateY(-2px); 
+      background: color-mix(in oklab, var(--brandA) 10%, transparent);
+    }
 
     .burger {
       display: none;
       width: 44px; height: 44px;
       border-radius: 14px;
       border: 1px solid var(--border);
-      background: color-mix(in oklab, var(--bg2) 75%, transparent);
+      background: color-mix(in oklab, var(--bg2) 80%, transparent);
       cursor: pointer;
-      box-shadow: 0 10px 30px var(--shadow);
+      box-shadow: 0 8px 24px var(--shadow);
       position: relative;
+      flex-shrink: 0;
     }
     .burger span {
       position: absolute;
@@ -221,7 +355,7 @@
       height: 2px;
       background: var(--text);
       border-radius: 2px;
-      transition: transform 0.25s ease, top 0.25s ease, opacity 0.2s ease;
+      transition: all 0.25s ease;
     }
     .burger span:nth-child(1){ top: 15px; }
     .burger span:nth-child(2){ top: 21px; }
@@ -232,30 +366,37 @@
       position: fixed;
       top: var(--navH);
       left: 0; right: 0;
-      background: color-mix(in oklab, var(--bg2) 92%, transparent);
+      background: color-mix(in oklab, var(--bg2) 95%, transparent);
       border-bottom: 1px solid var(--border);
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
       padding: 14px 0;
+      z-index: 999;
     }
     .mobile-panel ul {
       list-style: none;
       margin: 0;
-      padding: 0;
+      padding: 0 16px;
       display: grid;
       gap: 6px;
     }
     .mobile-panel a {
       display: block;
-      padding: 12px 14px;
+      padding: 14px 16px;
       border-radius: 14px;
       text-decoration: none;
       color: var(--muted);
       font-weight: 700;
-      background: color-mix(in oklab, var(--bg2) 65%, transparent);
+      background: color-mix(in oklab, var(--bg2) 70%, transparent);
       border: 1px solid var(--border);
+      transition: all 0.2s ease;
     }
-    .mobile-panel a:hover { color: var(--text); }
+    .mobile-panel a:hover,
+    .mobile-panel a.active { 
+      color: var(--text); 
+      background: color-mix(in oklab, var(--brandA) 15%, transparent);
+      border-color: color-mix(in oklab, var(--brandA) 30%, var(--border));
+    }
 
     /* ===== HERO LAYOUT ===== */
     main {
@@ -275,6 +416,8 @@
     .sidebar {
       position: sticky;
       top: calc(var(--navH) + 18px);
+      align-self: start;
+      z-index: 10;
     }
 
     .glass-card {
@@ -282,6 +425,8 @@
       border: 1px solid var(--border);
       border-radius: var(--radius2);
       box-shadow: 0 18px 48px var(--shadow);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
     }
 
     .profile {
@@ -295,11 +440,13 @@
       inset: -60px -60px auto auto;
       width: 200px; height: 200px;
       border-radius: 50%;
-      background: radial-gradient(circle at 30% 30%, color-mix(in oklab, var(--brandB) 45%, transparent), transparent 60%),
-                  radial-gradient(circle at 60% 65%, color-mix(in oklab, var(--brandA) 45%, transparent), transparent 60%);
+      background: 
+        radial-gradient(circle at 30% 30%, color-mix(in oklab, var(--brandB) 40%, transparent), transparent 60%),
+        radial-gradient(circle at 60% 65%, color-mix(in oklab, var(--brandA) 40%, transparent), transparent 60%);
       filter: blur(2px);
-      opacity: 0.8;
+      opacity: 0.75;
       pointer-events: none;
+      z-index: 0;
     }
 
     .avatar {
@@ -307,9 +454,15 @@
       aspect-ratio: 1 / 1;
       border-radius: 22px;
       object-fit: cover;
-      border: 1px solid color-mix(in oklab, var(--border) 70%, transparent);
+      border: 2px solid color-mix(in oklab, var(--border) 60%, transparent);
       box-shadow: 0 20px 40px var(--shadow);
-      background: linear-gradient(135deg, color-mix(in oklab, var(--brandA) 30%, transparent), color-mix(in oklab, var(--brandB) 30%, transparent));
+      background: linear-gradient(135deg, color-mix(in oklab, var(--brandA) 25%, transparent), color-mix(in oklab, var(--brandB) 25%, transparent));
+      position: relative;
+      z-index: 1;
+      transition: transform 0.3s ease;
+    }
+    .avatar:hover {
+      transform: scale(1.02);
     }
 
     .profile h2 {
@@ -317,11 +470,15 @@
       margin: 16px 0 4px;
       font-size: 1.7rem;
       letter-spacing: 0.2px;
+      position: relative;
+      z-index: 1;
     }
     .profile p.role {
       margin: 0 0 14px;
       color: var(--muted);
       font-weight: 600;
+      position: relative;
+      z-index: 1;
     }
 
     .meta {
@@ -331,24 +488,38 @@
       color: var(--muted);
       font-weight: 600;
       font-size: 0.95rem;
+      position: relative;
+      z-index: 1;
     }
     .meta-item {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       gap: 10px;
       padding: 10px 12px;
       border-radius: 14px;
       border: 1px solid var(--border);
-      background: color-mix(in oklab, var(--bg2) 68%, transparent);
+      background: color-mix(in oklab, var(--bg2) 72%, transparent);
+      transition: border-color 0.2s ease;
     }
-    .meta-item svg { width: 18px; height: 18px; color: var(--brandA); flex: 0 0 auto; }
+    .meta-item:hover {
+      border-color: color-mix(in oklab, var(--brandA) 30%, var(--border));
+    }
+    .meta-item svg { 
+      width: 18px; height: 18px; 
+      color: var(--brandA); 
+      flex: 0 0 auto; 
+      margin-top: 2px;
+    }
 
     .social {
       display: grid;
       gap: 8px;
       margin-top: 8px;
+      position: relative;
+      z-index: 1;
     }
-    .social a {
+    .social a,
+    .social-btn {
       display: flex;
       align-items: center;
       gap: 10px;
@@ -358,34 +529,63 @@
       text-decoration: none;
       color: var(--muted);
       font-weight: 700;
-      background: color-mix(in oklab, var(--bg2) 70%, transparent);
-      transition: transform 0.22s ease, background 0.22s ease, color 0.22s ease;
+      background: color-mix(in oklab, var(--bg2) 74%, transparent);
+      transition: all 0.22s ease;
+      cursor: pointer;
+      position: relative;
     }
-    .social a svg { width: 18px; height: 18px; }
-    .social a:hover {
+    .social a svg,
+    .social-btn svg { 
+      width: 18px; height: 18px; 
+      flex-shrink: 0;
+    }
+    .social a:hover,
+    .social-btn:hover {
       color: white;
       background: linear-gradient(135deg, var(--brandA), var(--brandB));
       transform: translateX(4px);
       border-color: transparent;
+      box-shadow: 0 8px 24px color-mix(in oklab, var(--brandA) 20%, var(--shadow));
+    }
+    
+    .social-btn {
+      width: 100%;
+      justify-content: flex-start;
+      text-align: left;
+    }
+    .social-btn .copied-msg {
+      margin-left: auto;
+      font-size: 0.82rem;
+      opacity: 0;
+      transform: translateX(8px);
+      transition: all 0.25s ease;
+      color: white;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .social-btn.copied .copied-msg {
+      opacity: 1;
+      transform: translateX(0);
     }
 
     /* Right content */
     .content {
-      padding: 18px;
+      padding: 0 4px;
     }
 
     .hero-head {
-      padding: 22px;
+      padding: 24px;
       border-radius: var(--radius2);
       background: linear-gradient(
         135deg,
-        color-mix(in oklab, var(--brandA) 10%, transparent),
-        color-mix(in oklab, var(--brandB) 10%, transparent)
+        color-mix(in oklab, var(--brandA) 12%, transparent),
+        color-mix(in oklab, var(--brandB) 12%, transparent)
       );
       border: 1px solid var(--border);
       box-shadow: 0 18px 48px var(--shadow);
       position: relative;
       overflow: hidden;
+      margin-bottom: 18px;
     }
     .hero-head::after {
       content: "";
@@ -393,58 +593,74 @@
       inset: auto -120px -140px auto;
       width: 420px; height: 420px;
       border-radius: 50%;
-      background: radial-gradient(circle at 30% 30%, color-mix(in oklab, var(--brandC) 28%, transparent), transparent 60%),
-                  radial-gradient(circle at 60% 65%, color-mix(in oklab, var(--brandB) 28%, transparent), transparent 60%);
+      background: 
+        radial-gradient(circle at 30% 30%, color-mix(in oklab, var(--brandC) 30%, transparent), transparent 60%),
+        radial-gradient(circle at 60% 65%, color-mix(in oklab, var(--brandB) 30%, transparent), transparent 60%);
       filter: blur(1px);
-      opacity: 0.9;
+      opacity: 0.85;
       pointer-events: none;
+      z-index: 0;
+    }
+    .hero-head > * {
+      position: relative;
+      z-index: 1;
     }
 
     .kicker {
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      padding: 8px 12px;
+      padding: 8px 14px;
       border-radius: 999px;
       border: 1px solid var(--border);
-      background: color-mix(in oklab, var(--bg2) 78%, transparent);
+      background: color-mix(in oklab, var(--bg2) 82%, transparent);
       color: var(--muted);
       font-weight: 800;
       font-size: 0.9rem;
+      margin-bottom: 12px;
     }
     .dot {
       width: 10px; height: 10px;
       border-radius: 50%;
       background: linear-gradient(135deg, var(--brandA), var(--brandB));
-      box-shadow: 0 8px 20px color-mix(in oklab, var(--brandA) 20%, var(--shadow));
+      box-shadow: 0 8px 20px color-mix(in oklab, var(--brandA) 25%, var(--shadow));
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.8; transform: scale(0.95); }
     }
 
     .hero-title {
       font-family: "Playfair Display", serif;
-      margin: 14px 0 10px;
+      margin: 8px 0 12px;
       font-size: clamp(1.9rem, 2.2vw + 1.2rem, 3.0rem);
       line-height: 1.15;
       letter-spacing: 0.2px;
+      color: var(--text-on-gradient);
     }
     .hero-title .name {
       background: linear-gradient(135deg, var(--brandA), var(--brandB));
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
+      font-weight: 700;
     }
 
     .hero-sub {
       margin: 0;
-      color: var(--muted);
+      color: var(--text-on-gradient);
       font-size: 1.08rem;
       max-width: 70ch;
+      font-weight: 500;
+      text-shadow: 0 1px 2px color-mix(in oklab, var(--bg) 30%, transparent);
     }
 
     .cta-row {
       display: flex;
       gap: 10px;
       flex-wrap: wrap;
-      margin-top: 16px;
+      margin-top: 18px;
       position: relative;
       z-index: 1;
     }
@@ -457,155 +673,427 @@
       background: var(--card);
       border: 1px solid var(--border);
       box-shadow: 0 18px 48px var(--shadow);
+      transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+    .section:hover {
+      box-shadow: 0 22px 56px var(--shadow);
+      border-color: color-mix(in oklab, var(--brandA) 20%, var(--border));
     }
 
     .section h3 {
       font-family: "Playfair Display", serif;
-      margin: 0 0 14px;
+      margin: 0 0 16px;
       font-size: 1.5rem;
       display: flex;
       align-items: center;
       gap: 10px;
       color: var(--primary);
+      padding-bottom: 8px;
+      border-bottom: 1px dashed var(--border);
     }
-
-    .section h3 svg { width: 26px; height: 26px; color: var(--brandA); }
+    .section h3 svg { 
+      width: 26px; height: 26px; 
+      color: var(--brandA); 
+      flex-shrink: 0;
+    }
 
     .grid-2 {
       display: grid;
       grid-template-columns: 1.2fr 1fr;
-      gap: 14px;
+      gap: 16px;
     }
 
     .pill {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      padding: 10px 12px;
-      border-radius: 14px;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
       border: 1px solid var(--border);
-      background: color-mix(in oklab, var(--bg2) 70%, transparent);
+      background: color-mix(in oklab, var(--bg2) 74%, transparent);
       color: var(--muted);
       font-weight: 700;
+      font-size: 0.9rem;
+      transition: all 0.2s ease;
+    }
+    .pill:hover {
+      background: color-mix(in oklab, var(--brandA) 12%, transparent);
+      color: var(--text);
+      border-color: color-mix(in oklab, var(--brandA) 30%, var(--border));
     }
 
     /* Timeline */
     .timeline {
       display: grid;
-      gap: 12px;
-      margin-top: 10px;
+      gap: 14px;
+      margin-top: 8px;
     }
 
     .t-item {
       border: 1px solid var(--border);
-      background: color-mix(in oklab, var(--bg2) 72%, transparent);
+      background: color-mix(in oklab, var(--bg2) 76%, transparent);
       border-radius: 16px;
-      padding: 14px;
-      transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+      padding: 16px;
+      transition: all 0.25s ease;
+      position: relative;
+    }
+    .t-item::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 20px;
+      bottom: 20px;
+      width: 3px;
+      background: linear-gradient(to bottom, var(--brandA), var(--brandB));
+      border-radius: 0 3px 3px 0;
+      opacity: 0;
+      transition: opacity 0.25s ease;
     }
     .t-item:hover {
-      transform: translateY(-2px);
-      border-color: color-mix(in oklab, var(--brandA) 35%, var(--border));
-      box-shadow: 0 16px 40px var(--shadow);
+      transform: translateY(-3px);
+      border-color: color-mix(in oklab, var(--brandA) 40%, var(--border));
+      box-shadow: 0 16px 44px var(--shadow);
+      background: color-mix(in oklab, var(--bg2) 82%, transparent);
+    }
+    .t-item:hover::before {
+      opacity: 1;
     }
     .t-head {
       display: flex;
       justify-content: space-between;
-      gap: 10px;
+      gap: 12px;
       align-items: flex-start;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
     }
-    .t-title { font-weight: 900; color: var(--text); }
-    .t-org { color: var(--brandA); font-weight: 800; }
+    .t-title { 
+      font-weight: 800; 
+      color: var(--text); 
+      font-size: 1.05rem;
+    }
+    .t-org { 
+      color: var(--brandA); 
+      font-weight: 700; 
+      font-size: 0.98rem;
+    }
     .t-date {
       color: var(--muted);
       font-size: 0.9rem;
-      font-weight: 800;
+      font-weight: 700;
       white-space: nowrap;
+      background: color-mix(in oklab, var(--bg2) 60%, transparent);
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
     }
-    .t-desc { color: var(--muted); margin: 0; }
-    .t-desc ul { margin: 8px 0 0 18px; }
+    .t-desc { 
+      color: var(--muted); 
+      margin: 0; 
+      font-weight: 500;
+    }
+    .t-desc ul { 
+      margin: 8px 0 0 20px; 
+      padding-left: 0;
+    }
+    .t-desc li {
+      margin-bottom: 4px;
+    }
 
     /* Publications */
-    .pubs { display: grid; gap: 12px; }
+    .pubs { display: grid; gap: 14px; }
     .pub {
       border: 1px solid var(--border);
-      background: color-mix(in oklab, var(--bg2) 72%, transparent);
+      background: color-mix(in oklab, var(--bg2) 76%, transparent);
       border-radius: 16px;
-      padding: 14px;
-      transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+      padding: 16px;
+      transition: all 0.25s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .pub::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: linear-gradient(to bottom, var(--brandB), var(--brandA));
+      opacity: 0;
+      transition: opacity 0.25s ease;
     }
     .pub:hover {
-      transform: translateY(-2px);
-      border-color: color-mix(in oklab, var(--brandB) 35%, var(--border));
-      box-shadow: 0 16px 40px var(--shadow);
+      transform: translateY(-3px);
+      border-color: color-mix(in oklab, var(--brandB) 40%, var(--border));
+      box-shadow: 0 16px 44px var(--shadow);
     }
-    .pub-title { font-weight: 900; margin: 0 0 6px; }
-    .pub-meta { margin: 0; color: var(--muted); font-weight: 650; font-size: 0.95rem; }
-    .pub-venue { margin: 8px 0 0; color: var(--brandA); font-weight: 900; }
+    .pub:hover::before {
+      opacity: 1;
+    }
+    .pub-title { 
+      font-weight: 800; 
+      margin: 0 0 6px; 
+      font-size: 1.05rem;
+      line-height: 1.4;
+    }
+    .pub-meta { 
+      margin: 0; 
+      color: var(--muted); 
+      font-weight: 600; 
+      font-size: 0.95rem;
+    }
+    .pub-venue { 
+      margin: 10px 0 0; 
+      color: var(--brandA); 
+      font-weight: 800; 
+      font-size: 0.95rem;
+    }
     .pub a {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      margin-top: 10px;
-      padding: 10px 12px;
+      margin-top: 12px;
+      padding: 10px 14px;
       border-radius: 14px;
       text-decoration: none;
-      font-weight: 900;
+      font-weight: 800;
       color: white;
       background: linear-gradient(135deg, var(--brandA), var(--brandB));
-      transition: transform 0.22s ease;
+      transition: all 0.22s ease;
+      font-size: 0.92rem;
     }
-    .pub a:hover { transform: translateY(-1px); }
-    .pub a svg { width: 16px; height: 16px; }
+    .pub a:hover { 
+      transform: translateY(-2px); 
+      box-shadow: 0 10px 28px color-mix(in oklab, var(--brandA) 25%, var(--shadow));
+    }
+    .pub a svg { 
+      width: 16px; height: 16px; 
+      flex-shrink: 0;
+    }
+
+    /* Projects Section */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 14px;
+      margin-top: 10px;
+    }
+    .project-card {
+      border: 1px solid var(--border);
+      background: color-mix(in oklab, var(--bg2) 76%, transparent);
+      border-radius: 16px;
+      padding: 16px;
+      transition: all 0.25s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-3px);
+      border-color: color-mix(in oklab, var(--brandB) 35%, var(--border));
+      box-shadow: 0 16px 44px var(--shadow);
+    }
+    .project-title {
+      font-weight: 800;
+      margin: 0 0 6px;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .project-title svg {
+      width: 18px;
+      height: 18px;
+      color: var(--brandB);
+      flex-shrink: 0;
+    }
+    .project-desc {
+      margin: 0 0 10px;
+      color: var(--muted);
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+    .project-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 12px;
+    }
+    .project-tech .tag {
+      font-size: 0.82rem;
+      padding: 4px 8px;
+    }
+    .project-links {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .project-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 10px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.88rem;
+      color: var(--muted);
+      border: 1px solid var(--border);
+      background: color-mix(in oklab, var(--bg2) 70%, transparent);
+      transition: all 0.2s ease;
+    }
+    .project-links a:hover {
+      color: white;
+      background: linear-gradient(135deg, var(--brandA), var(--brandB));
+      border-color: transparent;
+    }
+    .project-links a svg {
+      width: 14px;
+      height: 14px;
+    }
 
     /* Skills */
     .skills {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
+      gap: 14px;
     }
     .skill {
       border: 1px solid var(--border);
-      background: color-mix(in oklab, var(--bg2) 72%, transparent);
+      background: color-mix(in oklab, var(--bg2) 76%, transparent);
       border-radius: 16px;
-      padding: 14px;
+      padding: 16px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .skill:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 38px var(--shadow);
+      border-color: color-mix(in oklab, var(--brandA) 25%, var(--border));
     }
     .skill h4 {
-      margin: 0 0 10px;
+      margin: 0 0 12px;
       display: flex;
       align-items: center;
       gap: 10px;
-      font-size: 1.05rem;
+      font-size: 1.08rem;
       color: var(--primary);
-      font-weight: 900;
+      font-weight: 800;
     }
-    .skill h4 svg { width: 20px; height: 20px; color: var(--brandB); }
+    .skill h4 svg { 
+      width: 20px; height: 20px; 
+      color: var(--brandB); 
+      flex-shrink: 0;
+    }
     .tags {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
     }
     .tag {
-      padding: 8px 10px;
+      padding: 6px 10px;
       border-radius: 999px;
-      font-weight: 850;
-      font-size: 0.9rem;
+      font-weight: 700;
+      font-size: 0.88rem;
       color: color-mix(in oklab, var(--brandA) 85%, var(--text));
       background: linear-gradient(135deg,
-        color-mix(in oklab, var(--brandA) 14%, transparent),
-        color-mix(in oklab, var(--brandB) 14%, transparent)
+        color-mix(in oklab, var(--brandA) 12%, transparent),
+        color-mix(in oklab, var(--brandB) 12%, transparent)
       );
-      border: 1px solid color-mix(in oklab, var(--border) 70%, transparent);
+      border: 1px solid color-mix(in oklab, var(--border) 65%, transparent);
+      transition: all 0.2s ease;
+    }
+    .tag:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px color-mix(in oklab, var(--brandA) 15%, var(--shadow));
+    }
+
+    /* Peer Review Section */
+    .review-list {
+      display: grid;
+      gap: 10px;
+      margin-top: 8px;
+    }
+    .review-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 12px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: color-mix(in oklab, var(--bg2) 72%, transparent);
+    }
+    .review-item svg {
+      width: 18px;
+      height: 18px;
+      color: var(--accent-safe);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .review-text {
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin: 0;
     }
 
     /* Footer */
     footer {
-      margin-top: 20px;
-      padding: 18px 0 36px;
+      margin-top: 24px;
+      padding: 20px 0 40px;
       color: var(--muted);
       text-align: center;
-      font-weight: 650;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    footer a {
+      color: var(--brandA);
+      text-decoration: none;
+      font-weight: 700;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Scroll-to-top button */
+    #toTop {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 998;
+      display: none;
+      animation: fadeIn 0.3s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Print styles */
+    @media print {
+      nav, .burger, .mobile-panel, .cta-row, footer, #toTop, .social-btn .copied-msg { 
+        display: none !important; 
+      }
+      body { 
+        background: #fff !important; 
+        color: #000 !important; 
+        font-size: 11pt;
+      }
+      .glass-card, .section, .hero-head { 
+        box-shadow: none !important; 
+        border: 1px solid #ccc !important; 
+        background: #fff !important;
+        break-inside: avoid;
+      }
+      a { 
+        color: #000 !important; 
+        text-decoration: underline !important; 
+      }
+      .avatar { 
+        border: 1px solid #ccc !important; 
+      }
+      .hero-title, .hero-sub {
+        color: #000 !important;
+        text-shadow: none !important;
+      }
+      .t-item, .pub, .skill, .project-card {
+        page-break-inside: avoid;
+      }
     }
 
     /* Responsiveness */
@@ -616,7 +1104,7 @@
       .skills { grid-template-columns: 1fr; }
       .grid-2 { grid-template-columns: 1fr; }
       .nav-links { display: none; }
-      .burger { display: inline-block; }
+      .burger { display: inline-flex; }
       .mobile-panel { display: none; }
       body[data-menu="open"] .mobile-panel { display: block; }
       body[data-menu="open"] .burger span:nth-child(1){ top: 21px; transform: rotate(45deg); }
@@ -630,21 +1118,43 @@
       .cta-row { gap: 8px; }
       .btn { width: 100%; justify-content: center; }
       .btn-primary { width: 100%; }
+      .t-head { flex-direction: column; align-items: flex-start; }
+      .t-date { margin-top: 6px; }
+      .hero-head { padding: 20px; }
+      .hero-title { font-size: clamp(1.7rem, 5vw + 1rem, 2.4rem); }
     }
 
     /* Reduce motion */
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
-      * { transition: none !important; animation: none !important; }
+      *, *::before, *::after { 
+        transition: none !important; 
+        animation: none !important; 
+      }
+      .dot { animation: none; }
+    }
+
+    /* High contrast mode support */
+    @media (prefers-contrast: high) {
+      :root {
+        --border: rgba(15, 23, 42, 0.35);
+        --shadow: rgba(2, 6, 23, 0.25);
+      }
+      .glass-card, .section, .hero-head {
+        border-width: 2px;
+      }
     }
   </style>
 </head>
 
 <body>
+  <!-- Skip link for accessibility -->
+  <a href="#home" class="skip-link">Skip to main content</a>
+
   <!-- NAV -->
-  <nav>
+  <nav role="navigation" aria-label="Main navigation">
     <div class="container nav-inner">
-      <a class="logo" href="#home" aria-label="Go to homepage">
+      <a class="logo" href="#home" aria-label="Ghoshana Bista — Home">
         <div class="logo-mark" aria-hidden="true"></div>
         <div class="logo-text">
           <strong>Ghoshana Bista</strong>
@@ -652,9 +1162,10 @@
         </div>
       </a>
 
-      <ul class="nav-links" aria-label="Primary">
+      <ul class="nav-links" aria-label="Primary navigation">
         <li><a href="#about">About</a></li>
         <li><a href="#publications">Publications</a></li>
+        <li><a href="#projects">Projects</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -662,7 +1173,7 @@
       </ul>
 
       <div class="nav-actions">
-        <button class="icon-btn" id="themeBtn" aria-label="Toggle theme" title="Toggle theme">
+        <button class="icon-btn" id="themeBtn" aria-label="Toggle dark mode" title="Toggle theme">
           <span id="themeIcon" aria-hidden="true">🌙</span>
         </button>
 
@@ -670,16 +1181,19 @@
           <span></span><span></span><span></span>
         </button>
 
-        <a class="btn btn-primary" href="mailto:ghoshana73@gmail.com">Email</a>
+        <a class="btn btn-primary" href="mailto:ghoshana73@gmail.com" aria-label="Send email to Ghoshana">
+          ✉️ Email
+        </a>
       </div>
     </div>
 
     <!-- Mobile panel -->
-    <div class="mobile-panel" id="mobilePanel">
+    <div class="mobile-panel" id="mobilePanel" role="dialog" aria-modal="true" aria-label="Mobile menu">
       <div class="container">
         <ul>
           <li><a href="#about" class="m-link">About</a></li>
           <li><a href="#publications" class="m-link">Publications</a></li>
+          <li><a href="#projects" class="m-link">Projects</a></li>
           <li><a href="#experience" class="m-link">Experience</a></li>
           <li><a href="#education" class="m-link">Education</a></li>
           <li><a href="#skills" class="m-link">Skills</a></li>
@@ -690,16 +1204,22 @@
   </nav>
 
   <main class="container" id="home">
-    <section class="hero">
+    <section class="hero" aria-label="Introduction">
       <!-- SIDEBAR -->
       <aside class="sidebar">
         <div class="glass-card profile">
-          <!-- Replace src with your real image -->
-          <img
-            class="avatar"
-            src="https://via.placeholder.com/800x800.png?text=GB"
-            alt="Portrait of Ghoshana Bista"
-          />
+          <!-- Replace with your actual portrait - optimized WebP with fallback -->
+          <picture>
+            <source srcset="/images/ghoshana-portrait.webp" type="image/webp">
+            <img
+              class="avatar"
+              src="https://via.placeholder.com/800x800.png?text=GB"
+              alt="Professional portrait of Ghoshana Bista, Research Engineer at LEAT — Université Côte d'Azur"
+              width="400"
+              height="400"
+              loading="eager"
+            />
+          </picture>
 
           <h2>Ghoshana Bista</h2>
           <p class="role">Research Engineer • Sophia Antipolis, France</p>
@@ -716,36 +1236,36 @@
               <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
               </svg>
-              <span>LEAT — Université Côte d’Azur</span>
+              <span>LEAT — Université Côte d'Azur</span>
             </div>
           </div>
 
-          <div class="social" aria-label="Social links">
-            <a href="mailto:ghoshana73@gmail.com">
+          <div class="social" aria-label="Professional links">
+            <button class="social-btn" id="copyEmail" aria-label="Copy email address to clipboard">
               <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
               </svg>
-              Email
-            </a>
+              <span>ghoshana73@gmail.com</span>
+              <span class="copied-msg" aria-live="polite">✓ Copied!</span>
+            </button>
 
-            <a href="https://www.linkedin.com/in/ghoshana-bista-4128b4117/" target="_blank" rel="noopener">
+            <a href="https://www.linkedin.com/in/ghoshana-bista-4128b4117/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
               <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
               </svg>
               LinkedIn
             </a>
 
-            <!-- Replace # with your real links -->
-            <a href="https://scholar.google.com/citations?hl=fr&user=X3rJrjUAAAAJ&view_op=list_works" target="_blank" rel="noopener" class="social-link">
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <a href="https://scholar.google.com/citations?hl=fr&user=X3rJrjUAAAAJ&view_op=list_works" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar profile">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                   d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
               </svg>
               Google Scholar
             </a>
             
-            <a href="https://github.com/ghoshana" target="_blank" rel="noopener" class="social-link">
-              <svg fill="currentColor" viewBox="0 0 24 24">
+            <a href="https://github.com/ghoshana" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+              <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path
                   d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
               </svg>
@@ -758,27 +1278,39 @@
       <!-- CONTENT -->
       <section class="content">
         <div class="hero-head">
-          <div class="kicker"><span class="dot"></span> Open to research / postdoc opportunities</div>
+          <div class="kicker" role="status">
+            <span class="dot" aria-hidden="true"></span> 
+            Open to research / postdoc opportunities
+          </div>
 
           <h1 class="hero-title">
-            Hello, I’m <span class="name">Ghoshana</span> — I build AI-driven network systems.
+            Hello, I'm <span class="name">Ghoshana</span> — I build AI-driven network systems.
           </h1>
 
           <p class="hero-sub">
-            Research Engineer at <strong>LEAT — Université Côte d’Azur</strong> working on
+            Research Engineer at <strong>LEAT — Université Côte d'Azur</strong> working on
             <strong>SDN-WAN + UAV-assisted networks</strong> and <strong>Multi-Agent RL</strong>
             for <strong>tiered QoS</strong> and <strong>5G slicing</strong>.
           </p>
 
           <div class="cta-row">
-            <a class="btn btn-primary" href="#publications">View Publications</a>
-            <a class="btn" href="#experience">Experience</a>
-            <a class="btn" href="#skills">Skills</a>
+            <a class="btn btn-primary" href="#publications">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+              </svg>
+              Publications
+            </a>
+            <a class="btn" href="/cv-ghoshana-bista.pdf" download aria-label="Download CV as PDF">
+              📄 Download CV
+            </a>
+            <a class="btn" href="#skills">
+              ⚡ Skills
+            </a>
           </div>
         </div>
 
-        <section class="section" id="about">
-          <h3>
+        <section class="section" id="about" aria-labelledby="about-heading">
+          <h3 id="about-heading">
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
             </svg>
@@ -787,13 +1319,13 @@
 
           <div class="grid-2">
             <div>
-              <p style="margin:0;color:var(--muted);font-weight:650;">
+              <p style="margin:0;color:var(--muted);font-weight:600;">
                 I combine <strong>software-defined networking</strong>, <strong>UAV communications</strong>,
                 and <strong>multi-agent reinforcement learning</strong> to optimize
                 <strong>differentiated QoS</strong> and <strong>resource allocation</strong> in
                 next-generation networks (5G/6G slicing, aerial RAN, SDN-WAN).
               </p>
-              <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px;">
+              <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px;">
                 <span class="pill">SDN / SDN-WAN</span>
                 <span class="pill">UAV-Aided Networks</span>
                 <span class="pill">Multi-Agent RL</span>
@@ -802,13 +1334,13 @@
             </div>
 
             <div>
-              <p style="margin:0;color:var(--muted);font-weight:650;">
+              <p style="margin:0;color:var(--muted);font-weight:600;">
                 I enjoy turning research ideas into solid prototypes: simulators, controllers,
                 learning pipelines, and evaluation tooling. I focus on clean design, reproducibility,
                 and measurable improvements on QoS metrics.
               </p>
-              <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px;">
-                <span class="pill">ns-3 / simulation</span>
+              <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px;">
+                <span class="pill">ns-3 / Simulation</span>
                 <span class="pill">Python / C++</span>
                 <span class="pill">Optimization</span>
               </div>
@@ -816,8 +1348,8 @@
           </div>
         </section>
 
-        <section class="section" id="publications">
-          <h3>
+        <section class="section" id="publications" aria-labelledby="pubs-heading">
+          <h3 id="pubs-heading">
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
             </svg>
@@ -826,45 +1358,135 @@
 
           <div class="pubs">
             <article class="pub">
-              <p class="pub-title">A study on optimizing VNF software cost</p>
-              <p class="pub-meta">G. Bista, E. Caron, A.-L. Vion</p>
-              <p class="pub-venue">GIIS 2020</p>
-              <a href="https://doi.org/10.1109/GIIS50753.2020.9248486" target="_blank" rel="noopener">
+              <p class="pub-title">Differentiated QoS DDPG-based Slicing and Drone Positioning for Aerial RAN</p>
+              <p class="pub-meta">G. Bista, A. Bradai, E. Moulay</p>
+              <p class="pub-venue">DCOSS-IoT 2024 • IEEE</p>
+              <a href="https://doi.org/10.1109/DCOSS-IoT61029.2024.00055" target="_blank" rel="noopener noreferrer">
                 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
                 </svg>
-                DOI Link
+                View Paper (DOI)
               </a>
             </article>
 
             <article class="pub">
               <p class="pub-title">Total cost modeling for VNF based on licenses and resources</p>
               <p class="pub-meta">G. Bista, E. Caron, A.-L. Vion</p>
-              <p class="pub-venue">CLOSER 2022</p>
-              <a href="https://doi.org/10.5220/0011079600003200" target="_blank" rel="noopener">
+              <p class="pub-venue">CLOSER 2022 • SCITEPRESS</p>
+              <a href="https://doi.org/10.5220/0011079600003200" target="_blank" rel="noopener noreferrer">
                 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
                 </svg>
-                DOI Link
+                View Paper (DOI)
               </a>
             </article>
 
             <article class="pub">
-              <p class="pub-title">Differentiated QoS DDPG-based Slicing and Drone Positioning for Aerial RAN</p>
-              <p class="pub-meta">G. Bista, A. Bradai, E. Moulay</p>
-              <p class="pub-venue">DCOSS-IoT 2024</p>
-              <a href="https://doi.org/10.1109/DCOSS-IoT61029.2024.00055" target="_blank" rel="noopener">
+              <p class="pub-title">A study on optimizing VNF software cost</p>
+              <p class="pub-meta">G. Bista, E. Caron, A.-L. Vion</p>
+              <p class="pub-venue">GIIS 2020 • IEEE</p>
+              <a href="https://doi.org/10.1109/GIIS50753.2020.9248486" target="_blank" rel="noopener noreferrer">
                 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
                 </svg>
-                DOI Link
+                View Paper (DOI)
               </a>
             </article>
           </div>
         </section>
 
-        <section class="section" id="experience">
-          <h3>
+        <!-- NEW: Projects Section -->
+        <section class="section" id="projects" aria-labelledby="projects-heading">
+          <h3 id="projects-heading">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+            </svg>
+            Research Projects
+          </h3>
+
+          <div class="projects-grid">
+            <article class="project-card">
+              <h4 class="project-title">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                </svg>
+                UAV Safety with CBF
+              </h4>
+              <p class="project-desc">Control Barrier Functions for safe UAV navigation in dynamic 5G environments with real-time QoS constraints.</p>
+              <div class="project-tech">
+                <span class="tag">CBF</span>
+                <span class="tag">UAV</span>
+                <span class="tag">Python</span>
+                <span class="tag">Safety-Critical RL</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/ghoshana/uav-cbf" target="_blank" rel="noopener">
+                  <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  Code
+                </a>
+                <a href="#publications">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                  Paper
+                </a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <h4 class="project-title">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                </svg>
+                Multi-Tier QoS Slicing
+              </h4>
+              <p class="project-desc">Hierarchical RL framework for dynamic resource allocation across latency, bandwidth, and reliability tiers in 5G networks.</p>
+              <div class="project-tech">
+                <span class="tag">DDPG</span>
+                <span class="tag">PPO</span>
+                <span class="tag">5G Slicing</span>
+                <span class="tag">ns-3</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/ghoshana/qos-slicing" target="_blank" rel="noopener">
+                  <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  Code
+                </a>
+                <a href="#publications">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                  Paper
+                </a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <h4 class="project-title">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                </svg>
+                VNF Cost Optimization
+              </h4>
+              <p class="project-desc">ML-based modeling of VNF licensing and resource costs for optimal NFV orchestration in cloud-edge environments.</p>
+              <div class="project-tech">
+                <span class="tag">Random Forest</span>
+                <span class="tag">ARIMA</span>
+                <span class="tag">NFV</span>
+                <span class="tag">Cost Modeling</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/ghoshana/vnf-cost" target="_blank" rel="noopener">
+                  <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  Code
+                </a>
+                <a href="#publications">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                  Paper
+                </a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="experience" aria-labelledby="exp-heading">
+          <h3 id="exp-heading">
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
             </svg>
@@ -876,7 +1498,7 @@
               <div class="t-head">
                 <div>
                   <div class="t-title">Research Engineer</div>
-                  <div class="t-org">LEAT — Université Côte d’Azur</div>
+                  <div class="t-org">LEAT — Université Côte d'Azur</div>
                 </div>
                 <div class="t-date">Feb 2025 – Present</div>
               </div>
@@ -884,6 +1506,7 @@
                 <ul>
                   <li>SDN-WAN & UAV-assisted MARL for differentiated QoS slicing</li>
                   <li>Resource allocation optimization & ML-based performance modeling</li>
+                  <li>Collaboration on UAV safety papers for DCoss & IFIP Networking</li>
                 </ul>
               </p>
             </div>
@@ -900,6 +1523,7 @@
                 <ul>
                   <li>5G deployment via multi-drone DRL (DDPG) for differentiated QoS</li>
                   <li>DCOSS-IoT 2024 publication on slicing & drone positioning</li>
+                  <li>Peer review for Concurrency & Computation, JNSM</li>
                 </ul>
               </p>
             </div>
@@ -916,14 +1540,15 @@
                 <ul>
                   <li>VNF licensing and resource allocation cost modeling</li>
                   <li>Publications: GIIS 2020, CLOSER 2022, SDS-2022</li>
+                  <li>Thesis: Software Asset Management for NFV ecosystems</li>
                 </ul>
               </p>
             </div>
           </div>
         </section>
 
-        <section class="section" id="education">
-          <h3>
+        <section class="section" id="education" aria-labelledby="edu-heading">
+          <h3 id="edu-heading">
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/>
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/>
@@ -940,7 +1565,7 @@
                 </div>
                 <div class="t-date">Feb 2023</div>
               </div>
-              <p class="t-desc">Thesis: Software Asset Management and Network Function Virtualization</p>
+              <p class="t-desc">Thesis: <em>Software Asset Management and Network Function Virtualization</em> • Advisor: Prof. E. Caron</p>
             </div>
 
             <div class="t-item">
@@ -951,6 +1576,7 @@
                 </div>
                 <div class="t-date">2018 – 2019</div>
               </div>
+              <p class="t-desc">Double-degree program with focus on ML for networks</p>
             </div>
 
             <div class="t-item">
@@ -961,12 +1587,24 @@
                 </div>
                 <div class="t-date">2017 – 2019</div>
               </div>
+              <p class="t-desc">Specialization: Wireless Communications & Network Security</p>
+            </div>
+            
+            <div class="t-item">
+              <div class="t-head">
+                <div>
+                  <div class="t-title">Bachelor in Electronics & Communication</div>
+                  <div class="t-org">Kathmandu Engineering College</div>
+                </div>
+                <div class="t-date">2008 – 2012</div>
+              </div>
+              <p class="t-desc">First Class with Distinction</p>
             </div>
           </div>
         </section>
 
-        <section class="section" id="skills">
-          <h3>
+        <section class="section" id="skills" aria-labelledby="skills-heading">
+          <h3 id="skills-heading">
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
             </svg>
@@ -986,6 +1624,7 @@
                 <span class="tag">C/C++</span>
                 <span class="tag">MATLAB</span>
                 <span class="tag">Java</span>
+                <span class="tag">Bash</span>
               </div>
             </div>
 
@@ -1001,6 +1640,7 @@
                 <span class="tag">DBSCAN</span>
                 <span class="tag">Random Forest</span>
                 <span class="tag">ARIMA</span>
+                <span class="tag">scikit-learn</span>
               </div>
             </div>
 
@@ -1015,6 +1655,7 @@
                 <span class="tag">DDPG</span>
                 <span class="tag">PPO</span>
                 <span class="tag">DQN</span>
+                <span class="tag">TQC</span>
                 <span class="tag">SDN-WAN</span>
                 <span class="tag">Network Slicing</span>
               </div>
@@ -1025,26 +1666,70 @@
                 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
                 </svg>
-                Simulation
+                Simulation & Tools
               </h4>
               <div class="tags">
                 <span class="tag">ns-3</span>
-                <span class="tag">Network Simulation</span>
-                <span class="tag">QoS Evaluation</span>
+                <span class="tag">Docker</span>
+                <span class="tag">Git/GitHub</span>
+                <span class="tag">LaTeX</span>
+                <span class="tag">matplotlib</span>
+                <span class="tag">seaborn</span>
               </div>
             </div>
           </div>
         </section>
 
-        <footer id="contact">
-          <p>© 2025 Ghoshana Bista • Built with a bluish & greenish premium theme</p>
+        <!-- Peer Review & Service -->
+        <section class="section" id="service" aria-labelledby="service-heading">
+          <h3 id="service-heading">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+            Peer Review & Service
+          </h3>
+          <div class="review-list">
+            <div class="review-item">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              <p class="review-text">Reviewer for <strong>Concurrency and Computation: Practice and Experience</strong> (Wiley)</p>
+            </div>
+            <div class="review-item">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              <p class="review-text">Reviewer for <strong>Journal of Network and Systems Management</strong> (Springer)</p>
+            </div>
+            <div class="review-item">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              <p class="review-text">Active participant in lab seminars, conference organization, and research community outreach</p>
+            </div>
+          </div>
+        </section>
+
+        <footer id="contact" role="contentinfo">
+          <p>
+            © 2025 Ghoshana Bista • 
+            <a href="mailto:ghoshana73@gmail.com">ghoshana73@gmail.com</a> • 
+            Sophia Antipolis, France
+          </p>
+          <p style="margin-top:8px;font-size:0.9rem">
+            This portfolio is designed with accessibility in mind (WCAG AA) and uses a colorblind-safe palette. 
+            <a href="#home" style="color:var(--brandA)">↑ Back to top</a>
+          </p>
         </footer>
       </section>
     </section>
   </main>
 
+  <!-- Scroll-to-top button -->
+  <button id="toTop" class="icon-btn" aria-label="Scroll to top" title="Scroll to top">↑</button>
+
   <script>
-    // Theme: remember choice
+    // ===== Theme Toggle with localStorage =====
     const root = document.documentElement;
     const themeBtn = document.getElementById("themeBtn");
     const themeIcon = document.getElementById("themeIcon");
@@ -1056,9 +1741,11 @@
       themeBtn.setAttribute("aria-label", mode === "dark" ? "Switch to light theme" : "Switch to dark theme");
     }
 
+    // Initialize theme
     const saved = localStorage.getItem("theme");
-    if (saved) setTheme(saved);
-    else {
+    if (saved) {
+      setTheme(saved);
+    } else {
       const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
       setTheme(prefersDark ? "dark" : "light");
     }
@@ -1068,49 +1755,187 @@
       setTheme(current === "dark" ? "light" : "dark");
     });
 
-    // Mobile menu
+    // ===== Mobile Menu Toggle =====
     const menuBtn = document.getElementById("menuBtn");
     const body = document.body;
+    const mobilePanel = document.getElementById("mobilePanel");
 
     function closeMenu() {
       body.removeAttribute("data-menu");
       menuBtn.setAttribute("aria-expanded", "false");
+      menuBtn.setAttribute("aria-label", "Open menu");
     }
+    
     function toggleMenu() {
-      const open = body.getAttribute("data-menu") === "open";
-      if (open) closeMenu();
-      else {
+      const isOpen = body.getAttribute("data-menu") === "open";
+      if (isOpen) {
+        closeMenu();
+      } else {
         body.setAttribute("data-menu", "open");
         menuBtn.setAttribute("aria-expanded", "true");
+        menuBtn.setAttribute("aria-label", "Close menu");
+        // Focus first link for accessibility
+        setTimeout(() => mobilePanel?.querySelector('a')?.focus(), 100);
       }
     }
 
     menuBtn.addEventListener("click", toggleMenu);
 
-    // Close menu after clicking a link
-    document.querySelectorAll(".m-link").forEach(a => {
-      a.addEventListener("click", () => closeMenu());
+    // Close menu when clicking a link
+    document.querySelectorAll(".m-link").forEach(link => {
+      link.addEventListener("click", closeMenu);
     });
 
-    // Close menu on Escape
+    // Close menu on Escape key
     document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") closeMenu();
+      if (e.key === "Escape") {
+        closeMenu();
+        menuBtn.focus();
+      }
     });
 
-    // Make anchor scroll offset nicer (due to fixed nav)
-    function offsetScrollToHash() {
-      if (!location.hash) return;
-      const el = document.querySelector(location.hash);
+    // Close menu when clicking outside
+    document.addEventListener("click", (e) => {
+      if (body.getAttribute("data-menu") === "open" && 
+          !e.target.closest('.nav-inner') && 
+          !e.target.closest('.mobile-panel')) {
+        closeMenu();
+      }
+    });
+
+    // ===== Smooth Scroll with Offset for Fixed Nav =====
+    function offsetScrollToHash(hash = location.hash) {
+      if (!hash) return;
+      const el = document.querySelector(hash);
       if (!el) return;
-      const y = el.getBoundingClientRect().top + window.scrollY - 86;
+      
+      const navHeight = document.querySelector('nav')?.offsetHeight || 72;
+      const offset = 20; // extra padding
+      const y = el.getBoundingClientRect().top + window.scrollY - navHeight - offset;
+      
       window.scrollTo({ top: y, behavior: "smooth" });
     }
-    window.addEventListener("hashchange", offsetScrollToHash);
 
-    // Also offset on first load (after layout)
+    // Handle hash changes
+    window.addEventListener("hashchange", () => offsetScrollToHash());
+    
+    // Handle initial load
     window.addEventListener("load", () => {
-      setTimeout(offsetScrollToHash, 50);
+      if (location.hash) {
+        setTimeout(() => offsetScrollToHash(), 100);
+      }
     });
+
+    // Intercept anchor clicks for smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href !== '#' && href.length > 1) {
+          e.preventDefault();
+          history.pushState(null, null, href);
+          offsetScrollToHash(href);
+        }
+      });
+    });
+
+    // ===== Active Navigation Highlighting =====
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a, .m-link');
+
+    function updateActiveNav() {
+      let current = '';
+      const scrollY = window.scrollY;
+      const navHeight = document.querySelector('nav')?.offsetHeight || 72;
+      
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - navHeight - 100;
+        const sectionBottom = sectionTop + section.offsetHeight;
+        
+        if (scrollY >= sectionTop && scrollY < sectionBottom) {
+          current = section.getAttribute('id');
+        }
+      });
+      
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        const linkHref = link.getAttribute('href');
+        if (linkHref && linkHref.slice(1) === current) {
+          link.classList.add('active');
+        }
+      });
+    }
+    
+    // Throttle scroll handler for performance
+    let scrollTimeout;
+    window.addEventListener('scroll', () => {
+      if (scrollTimeout) return;
+      scrollTimeout = setTimeout(() => {
+        updateActiveNav();
+        scrollTimeout = null;
+      }, 100);
+    }, { passive: true });
+    
+    // Initial call
+    updateActiveNav();
+
+    // ===== Copy Email to Clipboard =====
+    const copyEmailBtn = document.getElementById('copyEmail');
+    if (copyEmailBtn) {
+      copyEmailBtn.addEventListener('click', async () => {
+        const email = 'ghoshana73@gmail.com';
+        try {
+          await navigator.clipboard.writeText(email);
+          copyEmailBtn.classList.add('copied');
+          
+          // Reset after 2 seconds
+          setTimeout(() => {
+            copyEmailBtn.classList.remove('copied');
+          }, 2000);
+        } catch (err) {
+          console.warn('Failed to copy email:', err);
+          // Fallback: select text in a prompt
+          const result = prompt('Copy your email:', email);
+          if (result !== null) {
+            copyEmailBtn.classList.add('copied');
+            setTimeout(() => copyEmailBtn.classList.remove('copied'), 2000);
+          }
+        }
+      });
+    }
+
+    // ===== Scroll-to-Top Button =====
+    const toTopBtn = document.getElementById('toTop');
+    
+    function toggleToTopButton() {
+      if (window.scrollY > 400) {
+        toTopBtn.style.display = 'grid';
+      } else {
+        toTopBtn.style.display = 'none';
+      }
+    }
+    
+    window.addEventListener('scroll', toggleToTopButton, { passive: true });
+    toTopBtn?.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    
+    // Initialize
+    toggleToTopButton();
+
+    // ===== Reduce Motion Preference =====
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.documentElement.style.scrollBehavior = 'auto';
+    }
+
+    // ===== Preload critical resources hint =====
+    if ('link' in document) {
+      const preloadAvatar = document.createElement('link');
+      preloadAvatar.rel = 'preload';
+      preloadAvatar.as = 'image';
+      preloadAvatar.href = '/images/ghoshana-portrait.webp';
+      preloadAvatar.type = 'image/webp';
+      document.head.appendChild(preloadAvatar);
+    }
   </script>
 </body>
 </html>
